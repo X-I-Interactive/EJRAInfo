@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "EJRA in the Oxford Magazine";
+}
+
+<div class="row">
+
+    <div class="col-md-11 col-sm-11">
+        <div class="page-header">
+            <h2>The Oxford Magazine <small>on the EJRA<span class="fa fa-arrows-alt"></span></small></h2>
+            @Html.Partial("HeadingLinks", "3-4")
+        </div>
+        <p>
+            The following are some of the articles from the Oxford Magazine on the EJRA
+        </p>
+        @{ Html.RenderAction("OxfordMagazineLinksList", "Content"); }
+
+        <ul class="list-unstyled">
+            <li>
+                <a href="@Url.Content("~/Content/local/Galligan_01.PDF")" class="heading-link" target="_blank"> Goodbye to the EJRA </a> <small>Denis Galligan</small>
+            </li>
+            <li>
+                <a href="@Url.Content("~/Content/local/EwartArticle_01.PDF")" class="heading-link" target="_blank"> The EJRA Review: Report on the Report </a> <small>Paul Ewart</small>
+            </li>
+            <li>
+                <a href="@Url.Content("~/Content/local/EwartArticle_02.PDF")" class="heading-link" target="_blank"> EJRA, what are the options? </a> <small>Paul Ewart</small>
+            </li>
+            <li>
+                <a href="@Url.Content("~/Content/local/EwartArticle_03.PDF")" class="heading-link" target="_blank"> Can the EJRA achieve its aims? </a> <small>Paul Ewart</small>
+            </li>
+            <li>
+                <a href="@Url.Content("~/Content/local/EdwardsArticle_02.PDF")" class="heading-link" target="_blank"> Approaching the EJRA  </a> <small>Peter Edwards</small>
+            </li>
+            <li>
+                <a href="@Url.Content("~/Content/local/PalfreymanArticle2.PDF")" class="heading-link" target="_blank"> Reforming the EJRA </a> <small>David Palfreyman</small>
+            </li>
+            <li>
+                <a href="@Url.Content("~/Content/local/EdwardsArticle_01.PDF")" class="heading-link" target="_blank"> Experiencing the EJRA </a> <small>Peter Edwards</small>
+            </li>
+            <li>
+                <a href="@Url.Content("~/Content/local/EdwardsArticle_03.PDF")" class="heading-link" target="_blank"> Only a mother could tell them apart </a> <small>Peter Edwards</small>
+            </li>
+            <li>
+                <a href="@Url.Content("~/Content/local/EdwardsArticle_04.PDF")" class="heading-link" target="_blank"> Fossil fuels: to burn, or not to burn - that is the question </a> <small>Peter Edwards</small>
+            </li>
+            <li>
+                <a href="@Url.Content("~/Content/local/EdwardsArticle_05.PDF")" class="heading-link" target="_blank"> Letter: Fifth Week, Hilary Term, 2017 </a> <small>Peter Edwards</small>
+            </li>
+            <li>
+                <a href="@Url.Content("~/Content/local/EdwardsArticle_06.PDF")" class="heading-link" target="_blank"> Something I’ve said?: Eighth Week, Trinity Term, 2015 </a> <small>Peter Edwards</small>
+            </li>
+        </ul>
+    </div>
+</div>

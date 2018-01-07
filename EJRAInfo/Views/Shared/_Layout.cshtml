@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - The Oxford EJRA Group</title>
+    <!-- Styles -->
+    <!-- Bootstrap CSS -->
+    <link href="@Url.Content("~/Content/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+
+    <!-- Navigation menu -->
+    <link href="@Url.Content("~/Content/css/settings.css")" rel="stylesheet" type="text/css" media="screen" />
+    <link href="@Url.Content("~/Content/css/ddlevelsmenu-base.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/ddlevelsmenu-topbar.css")" rel="stylesheet" type="text/css" />
+    <!-- PrettyPhoto -->
+    <link href="@Url.Content("~/Content/css/prettyPhoto.css")" rel="stylesheet" type="text/css" />
+    <!-- cSlider -->
+    <link href="@Url.Content("~/Content/css/slider.css")" rel="stylesheet" type="text/css" />
+    <!-- Font awesome CSS -->
+    <link href="@Url.Content("~/Content/css/font-awesome.min.css")" rel="stylesheet" type="text/css" />
+    <!-- Custom CSS -->
+    <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet" type="text/css" />
+
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="@Url.Content("~/Scripts/jquery.js")" type="text/javascript"></script>
+
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")" type="text/javascript"></script>
+    <!-- prettyPhoto -->
+    <script src="@Url.Content("~/Scripts/jquery.prettyPhoto.js")" type="text/javascript"></script>
+    <!-- isotope -->
+    <script src="@Url.Content("~/Scripts/jquery.isotope.js")" type="text/javascript"></script>
+    <!-- Navigation menu -->
+    <script src="@Url.Content("~/Scripts/ddlevelsmenu.js")" type="text/javascript"></script>
+    <!-- jQuery cSlider / Extra script for cslider -->
+    <script src="@Url.Content("~/Scripts/jquery.cslider.js")" type="text/javascript"></script>
+    <!-- Support -->
+    <script src="@Url.Content("~/Scripts/filter.js")" type="text/javascript"></script>
+    <!-- Custom JS -->
+    <script src="@Url.Content("~/Scripts/custom.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.countdown.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Local/main.js")" type="text/javascript"></script>
+</head>
+<body>
+    <!-- Sliding panel starts-->
+
+    <div class="slidepanel">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-8">
+                    <div class="spara">
+                        <!-- Contact details -->
+                        <p>
+                            <i class="fa fa-envelope-o lightblue"></i> info@OxfordEJRAGroup.net &nbsp;
+
+                            <i class="fa fa-twitter lightblue"></i> @@OxfordEJRAGroup  &nbsp;
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="social">
+                        <!-- Social media icons. Replace # with your profile links -->
+                        <a href="https://twitter.com/OxfordEJRAGroup" class="blightblue" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <!-- Sliding panel ends-->
+    <!-- Header starts -->
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <!-- Logo starts -->
+                <div class="col-md-2 col-sm-2">
+                   <img src="~/Content/Images/Oxford_v_small.png" />
+                </div>
+                @*</div>
+                    <div class="row">*@
+                <div class="col-md-8 col-sm-8">
+                    <!-- Navbar starts -->
+
+                    <div class="navi pull-right">
+                        <div id="ddtopmenubar" class="mattblackmenu">
+                            <!-- Main navigation -->
+                            <!-- Use the background color class in anchor tag for colorful menu -->
+                            <ul>
+                                <li>
+                                    <a href="@Url.Action("Index", "Home")" class="blightblue"> <i class="fa fa-home"></i> Home</a>
+                                </li>
+
+                                <!-- Main navigation -->
+                                <li>
+                                    <a href="@Url.Action("EJRAIntroduction", "Home")" rel="ddsubmenu2" class="bred" title="What is the EJRA and now does it affect you"> <i class="fa fa-book"></i> The EJRA</a>
+                                    <ul id="ddsubmenu2" class="ddsubmenustyle">
+                                        <li><a href="@Url.Action("EJRAIntroduction", "Home")">An introduction to the EJRA</a></li>
+                                        <li><a href="@Url.Action("EJRALinks", "Home")">Links to the Oxford University EJRA pages</a></li>
+                                        <li><a href="@Url.Action("EJRAOther", "Home")">The EJRA and other Universities</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("EJRAJudgements", "Home")" rel="ddsubmenu3" class="borange" title="Why the EJRA needs to change"> <i class="fa fa-stop-circle"></i> Why</a>
+                                    <ul id="ddsubmenu3" class="ddsubmenustyle">
+                                        <li><a href="@Url.Action("EJRAAbolish", "Home")">Why abolish!</a></li>
+                                        <li><a href="@Url.Action("EJRAJudgements", "Home")">EJRA, the judgements</a></li>
+                                        <li><a href="@Url.Action("EJRAGalligan", "Home")">Galligan v the University of Oxford</a></li>
+                                        <li><a href="@Url.Action("EJRAPress", "Home")">Press coverage</a></li>                                        
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("EJRAMotion", "Home")" rel="ddsubmenu4" class="bviolet" title="What we are doing to change the EJRA"> <i class="fa fa-arrows-alt"></i> What</a>
+                                    <ul id="ddsubmenu4" class="ddsubmenustyle">
+                                        <li><a href="@Url.Action("EJRAOxfordMagazine", "Home")">Oxford Magazine Articles</a></li>
+                                        <li><a href="@Url.Action("EJRAMotion", "Home")">2016 Motion to Congregation</a></li>
+                                        <li><a href="@Url.Action("EJRAWhyMotion", "Home")">Why this motion and what it means</a></li>
+                                        <li><a href="@Url.Action("EJRADebate", "Home")">The debate</a></li>
+                                        <li><a href="@Url.Action("EJRAKeyPoints", "Home")">Key points of the discussion</a></li>                                        
+                                        <li><a href="@Url.Action("EJRAFAQs", "Home")">Frequently asked questions</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("SupportUs", "Home")" rel="ddsubmenu5" class="bgreen" title="How you can help"> <i class="fa fa-info"></i> How</a>
+                                    <ul id="ddsubmenu5" class="ddsubmenustyle">
+                                        <li><a href="@Url.Action("SupportUs", "Home")">Support us</a></li>
+                                        <li><a href="@Url.Action("InformOthers", "Home")">Spread the word</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("ContactUs", "Home")" class="bblue"> <i class="fa fa-envelope-o" title="How to contact us"></i> Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="navis"></div>
+
+                    <!-- Navbar ends -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="clearfix"></div>
+
+    <!-- Header ends -->
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <ul class="list-inline">
+                    <li><a href="@Url.Action("Index", "Home")"> <i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="@Url.Action("EJRAIntroduction", "Home")"><i class="fa fa-book"></i> The EJRA</a></li>
+                    <li><a href="@Url.Action("EJRAJudgements", "Home")"><i class="fa fa-stop-circle"></i> Why change the EJRA</a></li>
+                    
+                    <li><a href="@Url.Action("EJRAOxfordMagazine", "Home")"><i class="fa fa-arrows-alt"></i> Oxford Magazine Articles</a></li>
+                    <li><a href="@Url.Action("SupportUs", "Home")"><i class="fa fa-info"></i> Support us</a></li>
+
+                    <li><a href="@Url.Action("ContactUs", "Home")"> <i class="fa fa-envelope-o" title="How to contact us"></i> Contact us</a></li>
+
+                </ul>
+            </div>
+            <div class="row">
+                <div class="copy">
+                    <p>&copy; @DateTime.Now.Year - The Oxford EJRA Group</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>

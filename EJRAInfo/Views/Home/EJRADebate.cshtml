@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "EJRA Debate";
+}
+
+<div class="row">
+
+    <div class="col-md-11 col-sm-11">
+        <div class="page-header">
+            <h2>The debate <small>in Congreation<span class="fa fa-arrows-alt"></span></small></h2>
+            @Html.Partial("HeadingLinks", "3-3")
+        </div>
+        <p>
+            The following are some of the speakers that spoke in the debate. Click on the speaker's name to see the text of the speech. 
+            In some case the text includes parts of the speech that were omitted because of time constraints
+        </p>
+        @{ Html.RenderAction("SpeechLinksList", "Content"); } 
+    </div>
+</div>

@@ -1,0 +1,89 @@
+﻿@model string
+@{
+    string pageID = Model.Split('-')[0];
+    string omitLinkID = Model.Split('-')[1];
+    string linkIcon = "";    //"<span class='fa fa-link'></span>";
+    string headingLink = "heading-link";
+}
+<ul class="list-inline small">
+    @switch (pageID)
+    {
+        case "1":
+            if (omitLinkID != "1")
+            {
+                <li><a href="@Url.Action("EJRAIntroduction", "Home")" class="@headingLink">@Html.Raw(linkIcon) An introduction to the EJRA</a></li>}
+            if (omitLinkID != "2")
+            {
+                <li><a href="@Url.Action("EJRALinks", "Home") " class="@headingLink">@Html.Raw(linkIcon) Links to the Oxford University EJRA pages</a></li> }
+            if (omitLinkID != "3")
+            {
+                <li><a href="@Url.Action("EJRAOther", "Home")" class="@headingLink">@Html.Raw(linkIcon) The EJRA and other Universities</a></li>
+            }
+            break;
+        case "2":
+            if (omitLinkID != "6")
+            {
+                <li><a href="@Url.Action("EJRAAbolish", "Home")" class="@headingLink">@Html.Raw(linkIcon) Abolish the EJRA</a></li>
+            }
+            if (omitLinkID != "1")
+            {
+                <li><a href="@Url.Action("EJRAJudgements", "Home")" class="@headingLink">@Html.Raw(linkIcon)The EJRA judgements</a></li>
+            }
+            if (omitLinkID != "2")
+            {
+                <li><a href="@Url.Action("EJRAGalligan", "Home")" class="@headingLink">@Html.Raw(linkIcon) Galligan v the University of Oxford</a></li>
+            }
+            if (omitLinkID != "4")
+            {
+                @*<li><a href="@Url.Action("EJRAUSA", "Home")" class="@headingLink">@Html.Raw(linkIcon) USA Universities approach to retirement</a></li>*@
+            }
+            if (omitLinkID != "5")
+            {
+                <li><a href="@Url.Action("EJRAPress", "Home")" class="@headingLink">@Html.Raw(linkIcon) Press</a></li>
+            }
+           
+            break;
+        case "3":
+            if (omitLinkID != "4")
+            {
+                <li><a href="@Url.Action("EJRAOxfordMagazine", "Home")" class="@headingLink">@Html.Raw(linkIcon) Oxford Magazine Articles</a></li>
+            }
+            if (omitLinkID != "1")
+            {
+                <li><a href="@Url.Action("EJRAMotion", "Home")" class="@headingLink">@Html.Raw(linkIcon) 2016 Motion to Congregation</a></li>
+            }
+            if (omitLinkID != "2")
+            {
+                <li><a href="@Url.Action("EJRAWhyMotion", "Home")" class="@headingLink">@Html.Raw(linkIcon) Why this motion and what it means</a></li>                
+            }
+            if (omitLinkID != "3")
+            {
+                <li><a href="@Url.Action("EJRADebate", "Home")" class="@headingLink">@Html.Raw(linkIcon) The debate</a></li>
+            }
+            if (omitLinkID != "6")
+            {
+                <li><a href="@Url.Action("EJRAKeyPoints", "Home")" class="@headingLink">@Html.Raw(linkIcon) Key points</a></li>
+            }
+            if (omitLinkID != "5")
+            {
+                <li><a href="@Url.Action("EJRAFAQs", "Home")" class="@headingLink">@Html.Raw(linkIcon) Frequently asked questions</a></li>
+            }
+
+            
+
+
+            break;
+        case "4":
+            if (omitLinkID != "1")
+            {
+                <li><a href="@Url.Action("SupportUs", "Home")" class="@headingLink">@Html.Raw(linkIcon) Support us</a></li>
+            }
+
+            if (omitLinkID != "2")
+            {
+                <li><a href="@Url.Action("InformOthers", "Home")" class="@headingLink">@Html.Raw(linkIcon) Spread the word</a></li>
+            }
+            break;
+    }
+
+</ul>

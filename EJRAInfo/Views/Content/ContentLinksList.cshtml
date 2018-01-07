@@ -1,0 +1,55 @@
+﻿@using HTMLFileContent.Domain
+@model List<ContentListItem>
+
+@{
+    <ul id="contentLinkList" class="list-unstyled">
+        @foreach (ContentListItem item in Model)
+        {
+            <li><a href="#" class="heading-link contentDisplay" id="@item.HTMLContentID"> @item.MainTitle<small> @item.SecondaryTitle</small></a></li>
+        }
+    </ul>
+}
+
+<div class="modal fade" tabindex="-1" role="dialog" id="contentModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>                
+                <h4 id="contentModalTitle"></h4>
+            </div>
+            <div class="modal-body" id="contentModalBody">
+
+            </div><!-- /.modal-body -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+            <!-- /.modal-footer -->
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#contentLinkList").on("click", ".contentDisplay", function () {
+
+            //alert(this.id);
+            var jqxhr1 = $.ajax({
+                type: 'POST', url: "/Content/GetContent", data: { contentID: this.id }
+            });
+            $.when(jqxhr1).done(function (contentForDisplay, textStatus, jqXHR) {
+                if (textStatus != "success") {
+                    alert("Error getting content");
+                    return false;
+                }
+                $("#contentModalBody").html(contentForDisplay);
+            });
+            $("#contentModalTitle").html($(this).html());
+            $('#contentModal').modal({ backdrop: 'static' });
+            return false;
+        });
+
+    }); // end of doc ready    
+
+</script>

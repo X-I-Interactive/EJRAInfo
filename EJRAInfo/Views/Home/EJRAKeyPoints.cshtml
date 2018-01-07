@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "EJRA Key Points";
+}
+
+<div class="row">
+    <div class="col-md-11 col-sm-11">
+        <div class="page-header">
+            <h2>Key points <small>fn the EJRA discussion <span class="fa fa-arrows-alt"></span></small></h2>
+            @Html.Partial("HeadingLinks", "3-6")
+
+
+            <h3>The motion and the postal vote<small> key points</small></h3>
+            @{ Html.RenderPartial("IndexPostalVoteMotion");}
+
+            @{ Html.RenderPartial("IndexPostalVoteCouncil");}
+
+
+
+        </div>
+    </div> @*end of col*@
+</div> @*end of row*@

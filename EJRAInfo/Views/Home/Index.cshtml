@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row">
+    <div class="col-md-5 col-sm-5">
+        <div class="page-header">
+            <h2>Key <small><span class="fa fa-info"></span> information</small></h2>
+        </div>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>Today's message</strong>
+                    </td>
+                    <td>
+                        <ul class="list-unstyled">
+                            <li>
+                                Congregation has debated the abolition of the EJRA and this is now the subject of a postal vote
+                            </li>
+                            <li>
+                                See <a href="@Url.Action("EJRAAbolish", "Home")" class="inline-link">here</a> for why we believe the EJRA should be abolished.
+                            </li>
+                            <li>
+                                <a href="@Url.Action("EJRAPress", "Home")" class="inline-link">The National Press</a> have recently featured articles on the EJRA
+                            </li>
+                            <li>
+                                <a href="@Url.Content("~/Content/local/Dame_Janet_Smith_Judgement.PDF")" class="inline-link" target="_blank">The EJRA was judged unlawful</a> by the University's own Court of Appeal<br />
+                            </li>
+                            <li>
+                                <a href="@Url.Content("~/Content/local/Stats report.PDF")" class="inline-link" target="_blank">Read the Report</a> by the Oxford Statistical Consultancy on the Review Group's Report<br />
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Older messages
+                    </td>
+                    <td>
+                        <ul class="list-unstyled">
+                            <li>
+                                The EJRA review panel have published their <a href="@Url.Action("EJRAJudgements", "Home")" class="inline-link">findings</a><br />
+                                Congregation approved the related changes to regulations. <strong>They did not approve the EJRA <em>per se</em></strong>
+                            </li>
+                            <li>
+                                The review on the EJRA has still left some big questions hanging; there are now four judgements from the University court of appeal.<br />
+                                Click <a href="@Url.Action("EJRAJudgements", "Home")" class="inline-link">here</a> for a discussion on these questions and to read the four judgements.
+                            </li>
+                            <li>
+                                &nbsp;
+                            </li>
+                            <li>
+                                Are you suffering from the EJRA? Do you need help? Do you need support?
+                                <a href="@Url.Action("ContactUs", "Home")" class="inline-link">Contact us </a>
+                            </li>
+                        </ul>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">The story before</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <ul>
+                            <li>
+                                The EJRA was the subject of a debate in Congregation on 17 May 2016<br />
+                                Many of the issues raised are still current
+                            </li>
+                            <li>
+                                The motion was:<br />
+                                <em>Good Governance of the University in Relation to the Administration of the EJRA Scheme</em>
+
+                            </li>
+                            <li>
+                                The motion was narrowly defeated. Some of the speeches are <a href="@Url.Action("EJRADebate", "Home")" class="inline-link">here</a>.
+                            </li>
+                            <li>
+                                There was a postal vote: over 1,600 members of Congregation voted. Over 46% supported the motion.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        Thank you everyone for your support!
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6 col-sm-6 col-md-offset-1">
+        <div class="page-header">
+            <h2>Oxford EJRA Group <small><span class="fa fa-home"></span></small></h2>
+        </div>
+
+        <p><span class="badge bred">What</span> is the EJRA and how does it affect you?</p>
+
+        <p>
+            <span class="badge borange">Why</span> the EJRA needs to change
+        </p>
+        <p>
+            <span class="badge bviolet">What</span>  we are doing
+        </p>
+        <p>
+            <span class="badge bgreen">How</span> you can help
+        </p>
+        <p>
+            <span class="badge bblue">How</span> we can help you
+        </p>
+        @{ Html.RenderPartial("IndexOxfordEJRAGroup");}
+
+    </div>   @*End of column*@
+</div>
